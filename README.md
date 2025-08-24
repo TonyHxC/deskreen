@@ -36,7 +36,7 @@ You must understand that now Ukraine has more people here willing to fight than 
 
 ## Deskreen turns any device with a web browser into a secondary screen for your computer
 
-Deskreen is an `electron.js` based application that uses `WebRTC` to make a live stream of your
+Deskreen is an `electron.js` based application that uses `WebRTC` to make a live  stream of your
 desktop to a web browser on any device.
 It is built on top of [Electron React Boilerplate](https://github.com/electron-react-boilerplate)
 For better security mechanism, end-to-end encryption is implemented, which is inspired by
