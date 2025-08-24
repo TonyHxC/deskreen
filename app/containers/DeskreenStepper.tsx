@@ -88,6 +88,7 @@ const DeskreenStepper = React.forwardRef((_props, ref) => {
     setPendingConnectionDevice,
   ] = useState<Device | null>(null);
 
+// Connection Stuff
   useEffect(() => {
     const ipInterval = setInterval(async () => {
       const gotIP = await ipcRenderer.invoke('get-local-lan-ip');
@@ -99,7 +100,11 @@ const DeskreenStepper = React.forwardRef((_props, ref) => {
     }, 1000);
 
     return () => {
-      clearInterval(ipInterval);
+		
+	if (ipIntervalRef.current) {
+		clearInterval(ipIntervalRef.current);
+	}
+	  
     };
   }, []);
 
